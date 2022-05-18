@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+           <img src="image/emp.png" alt="employe">
+           <h2>Employe Details</h2>
+        </div>
+        <form id="form" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name " required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" >
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" >
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputAddress2">Age</label>
+                <input type="number" class="form-control" id="age" placeholder =" 27" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputAddress2">Mobile</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder=" 9667418725"  pattern="[6-9]{1}[0-9]{9}">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputAddress2">Annual Salary</label>
+                <input type="number" class="form-control" id="salary" placeholder=" 10 LPA"  required pattern="'^[1-9][0-9]*(\.[0-9])?')]">
+            </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="JAIPUR" >
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control" aria-placeholder="Rajasthan" >
+                        <option selected>Choose...</option>
+                        <option>Andhra Pardesh</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Rajasthan</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="302021" >
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" >
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+
+    <script src="form.js"></script>
+</body>
+</html>
